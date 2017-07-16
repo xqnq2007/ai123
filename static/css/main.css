@@ -1,0 +1,30 @@
+.c-title-banner{
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.main-menu h3 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.main h3 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.main-menu dt {
+    float: left;
+    padding: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    position: relative;
+}
+.main-menu .main-list-sq{
+    width:100%;
+}

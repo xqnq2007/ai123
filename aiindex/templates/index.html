@@ -1,0 +1,499 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Blog Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset_source.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/my_style.css' %}">
+
+   <script src="{% static 'js/jquery-1.11.1.js' %}"></script>
+
+  </head>
+<body>
+	<div class="wrapper">
+
+<header id="top">
+    <div class="container">
+        <div class="logo fl">
+            <a href="javascript:void(0)"><img src="{% static 'img/logo.png' %}" alt="logo.png' %}"></a>
+        </div>
+        <ul class="navbar-left fl">
+            <li class="fl zixun js-click-zixun"  onmouseover="isOut=false" onmouseout="isOut=true">
+                <a href="javascript:void(0)">
+                    <span>咨询</span>
+                    <em class="fa fa-caret-down"></em>
+                    <em class="fa fa-caret-up undis"></em>
+                </a>
+            </li>
+            <li class="fl"><a href="javascript:void(0)"><span>群组</span></a></li>
+            <li class="fl huodong">
+                <a href="javascript:void(0)">
+                    <span>活动</span>
+                    <em class="fa fa-caret-down"></em>
+                    <em class="fa fa-caret-up undis"></em>
+                </a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+
+        <ul class="navbar-right fr">
+            <li class="fl"><a href="javascript:void(0)"><em class="fa fa-search"></em></a></li>
+            <li class="fl"><a href="javascript:void(0)"><span>登录</span></a></li>
+            <li class="fl"><a href="javascript:void(0)"><span>注册</span></a></li>
+            <li class="fl tougao"><a href="javascript:void(0)"><span>投稿</span></a></li>
+        </ul>
+        <div class="sub-navbar">
+        </div>
+
+
+        <div class="clear"></div>
+
+    </div>
+    <div class="nav-extend nav-extend-zixun undis" onmouseover="isOut=false" onmouseout="isOut=true">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)"><span>虎嗅F&M创新借</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><span>TOP DAY</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><span>上道沙龙</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><span>WoW！营销会</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><span>虎嗅听书会</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"><span>更多胡秀活动</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="c-search undis">
+        <div class="close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="search-container">
+            <div class="input-keywords">
+                <input class="fl" type="text" placeholder="请输入关键字">
+                <a href="" class="fr"><i class="fa fa-search"></i></a>
+            </div>
+            <div class="search-history">
+                <span class="history-lable">我的搜索历史</span>
+                <ul>
+                    <li><a href=""><span>数码</span></a></li>
+                    <li><a href=""><span>科技</span></a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear-hisotry">
+                    <a href=""><span>清空历史</span></a>
+                </div>
+            </div>
+            <div class="hot-search-keywords">
+                <span class="hotkeys-lable">热搜词</span>
+                <ul>
+                    <li><a href=""><span>数码</span></a></li>
+                    <li><a href=""><span>科技</span></a></li>
+                    <li><a href=""><span>互联网</span></a></li>
+                    <li><a href=""><span>汽车之家</span></a></li>
+                    <li><a href=""><span>Uber</span></a></li>
+                    <li><a href=""><span>支付宝</span></a></li>
+                    <li><a href=""><span>大数据</span></a></li>
+                    <li><a href=""><span>创业</span></a></li>
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="c-main fl">
+        <section class="c-first-banner">
+            <a href="javascript:void(0)">
+                <img width="800px" height="450px" src="{% static 'img/first-banner.jpg' %}">
+                <span class="article-title">下一代社交网络是怎样的下一代社交网络是怎样的下一代社交网络是怎样的下一代社交网络是怎样的？#来预测</span>
+            </a>
+
+        </section>
+        <section class="c-second-banner">
+            <div class="fl" >
+                <a href="javascript:void(0)">
+                    <img width="385px" height="217px" src="{% static 'img/second-banner.jpg' %}">
+                    <span class="article-title">下一代社交网络是怎样的下一代社交网络是怎样的下一代社交网络是怎样的下一代社交网络是怎样的？#来预测</span>
+                </a>
+            </div>
+            <div class="fr" >
+                <a href="javascript:void(0)">
+                    <img width="385px" height="217px" src="{% static 'img/second-banner.jpg' %}">
+                    <span class="article-title">下一代社交网络是怎样的？#来预测</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="c-article-list">
+            <div class="c-li-article-ordinary">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="fsize18">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time fsize14 vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="fsize14">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="fsize14">0</span>
+                        </section>
+                        <span class="mr30 fenge">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">没节操的天猫晚会不仅赢了收视率没节操的天猫晚会不仅赢了收视率没节操的天猫晚会不仅赢了收视率没节操的天猫晚会不仅赢了收视率，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+            <div class="c-li-article-ordinary">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="fsize18">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time fsize14 vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="fsize14">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="fsize14">0</span>
+                        </section>
+                        <span class="mr30">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+
+            <div class="c-li-article-push">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover2.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="">0</span>
+                        </section>
+                        <span class="mr30  undis">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+            <div class="c-li-article-ordinary">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="fsize18">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time fsize14 vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="fsize14">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="fsize14">0</span>
+                        </section>
+                        <span class="mr30">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+            <div class="c-li-article-ordinary">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="fsize18">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time fsize14 vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="fsize14">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="fsize14">0</span>
+                        </section>
+                        <span class="mr30">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+            <div class="c-li-article-push">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover2.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="">0</span>
+                        </section>
+                        <span class="mr30  undis">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+            <div class="c-li-article-ordinary">
+                <section class="c-article-cover fl">
+                    <a href="javascript:void(0)"><img src="{% static 'img/article-cover.jpg' %}"></a>
+                </section>
+                <section class="c-article-right fl">
+                    <h2 class="c-article-title">
+                        <a href="javascript:void(0)"><span class="fsize18">没节操的天猫晚会不仅赢了收视率，还带来“电视购物晚会”的新玩法</span></a>
+                    </h2>
+                    <section class="c-article-statics">
+                        <a href="javascript:void(0)"><img class="c-article-author-avatar vam" src="{% static 'img/11_avatar_middle.jpg' %}"></a>
+                        <a href="javascript:void(0)"><span class="c-article-author-name mr30 fsize14 vam">黑马良驹</span></a>
+                        <span class="c-article-send-time fsize14 vam">28分钟前</span>
+                        <section class="c-article-comment-num mr20 disIb vam">
+                            <em class="fa fa-comment"></em><span class="fsize14">0</span>
+                        </section>
+                        <section class="c-article-star-num mr20 disIb vam">
+                            <em class="fa fa-star"></em><span class="fsize14">0</span>
+                        </section>
+                        <span class="mr30">|</span>
+                        <section class="c-s-article-share disIb vam">
+                            <ul>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                                <li class="mr20 fl vam"><a href="javascript:void(0)"><img src="{% static 'img/20-20.png' %}"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <p class="c-p-article-summary fsize14">直播晚会这东西，就好像办婚事，要搞得热热闹闹，让网友觉得好玩</p>
+                </section>
+            </div>
+
+
+        </section>
+
+        <a id="i-a-article-load-more" href="javascript:void(0)"><span>点击加载更多</span></a>
+    </div>
+
+    <div class="c-side fr">
+        <div class="c-top-column">
+            <!-- 背景图实现 -->
+            <section class="c-column-head">
+                <span class="column-name fl">热议话题</span>
+                <span class="fr">13人讨论</span>
+            </section>
+            <a href="">
+            <img src="{% static 'img/column-top.jpg' %}">
+            <span class="article-title">下一代社交网络是怎样的？#来预测</span>
+            </a>
+        </div>
+        <div class="c-column">
+            <section class="c-column-head">
+                <span class="column-mark"></span>
+                <span class="column-name">热门群组</span>
+            </section>
+            <div class="c-column-content">
+                <div class="c-column-ele hot-group">
+                    <a href=""><span class="fl">科技神吐槽</span></a>
+                    <span class="fr">38060话题</span>
+                </div>
+                <div class="c-column-ele hot-group">
+                    <a href=""><span class="fl">科技神吐槽</span></a>
+                    <span class="fr">38060话题</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-column">
+            <section class="c-column-head">
+                <span class="column-mark"></span>
+                <span class="column-name">创业板</span>
+                <span class="fr">全部</span>
+            </section>
+            <div class="c-column-content">
+                <div class="c-column-ele chuangye">
+                    <img class="fl" src="{% static 'img/chuangye-cover.jpg' %}">
+                    <section class="fl">
+                        <a href=""><span class="title">新片场</span></a>
+                        <span class="summary">下一代传媒公司</span>
+                    </section>
+                </div>
+                <div class="c-column-ele chuangye">
+                    <img class="fl" src="{% static 'img/chuangye-cover.jpg' %}">
+                    <section class="fl">
+                        <a href=""><span class="title">新片场</span></a>
+                        <span class="summary">下一代传媒公司</span>
+                    </section>
+                </div>
+                <div class="c-column-ele chuangye">
+                    <img class="fl" src="{% static 'img/chuangye-cover.jpg' %}">
+                    <section class="fl">
+                        <a href=""><span class="title">新片场</span></a>
+                        <span class="summary">下一代传媒公司</span>
+                    </section>
+                </div>
+                <div class="c-column-ele chuangye">
+                    <img class="fl" src="{% static 'img/chuangye-cover.jpg' %}">
+                    <section class="fl">
+                        <a href=""><span class="title">新片场</span></a>
+                        <span class="summary">下一代传媒公司</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<footer class="c-footer">
+    <div class="c-main">
+        <div class="c-left fl">
+            <ul>
+                <li><a href=""><span>关于我们</span></a></li>
+                <li><a href=""><span>加入我们</span></a></li>
+                <li><a href=""><span>合作伙伴</span></a></li>
+                <li><a href=""><span>广告及服务</span></a></li>
+                <li><a href=""><span>常见问题解答</span></a></li>
+                <li><a href=""><span>防网络诈骗专题</span></a></li>
+                <div class="clear"></div>
+            </ul>
+
+            <section class="c-copyright">
+                <section class="disIb">
+                    <span>Copyright ©</span>
+                    <a href="javascript:void(0)"><span>虎嗅网</span></a>
+                    <span>北京虎嗅信息科技股份有限公司</span>
+                    <a href="javascript:void(0)"><span>京ICP备12013432号-1</span></a>
+                </section>
+                <i class="fa fa-dot-circle-o ml10 mr10"></i>
+                <section class="disIb">
+                    <span>本站运行在</span>
+                    <img src="{% static 'img/aliyun.png' %}">
+                    <span>阿里云+</span>
+                </section>
+            </section>
+        </div>
+        <div class="c-right fl">
+            <ul>
+                <li>
+                    <em class="fa fa-comment"></em>
+                    <img src="{% static 'img/weixin_erweima.png' %}">
+                </li>
+                <li>
+                    <em class="fa fa-comment"></em>
+                    <img src="{% static 'img/weixin_erweima.png' %}">
+
+                </li>
+                <li>
+                    <em class="fa fa-comment"></em>
+                    <img src="{% static 'img/weixin_erweima.png' %}">
+
+                </li>
+                <li>
+                    <em class="fa fa-comment"></em>
+                </li>
+                <li>
+                    <em class="fa fa-comment"></em>
+                </li>
+                <li>
+                    <em class="fa fa-comment"></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
+</div>
+</body>
+</html>
