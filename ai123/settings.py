@@ -25,7 +25,7 @@ SECRET_KEY = 'qmblq3s31+qln%a_nr)-$51*32&b02w$gq-^%fr-v#6g+)ulgy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','47.94.81.148']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','47.94.81.148','www.ai123.ai','ai123.ai']
 
 
 # Application definition
