@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'detailbase.html' %}
 {% load urlextend %}
 {% block container %}
     <div class="row">
@@ -14,15 +14,15 @@
                 <div style="line-height: 30px;font-size: 16px;margin: 20px 0">{{ article_obj.content|safe }}</div>
 
 {#                获取评论#}
-                <div class="row" style="line-height: 100px">
+                <!-- <div class="row" style="line-height: 100px">
                     <div class="col-md-4"><a style="color: #333;font-size: 16px;text-decoration: none" href="">默认评论</a>|
                         <a style="color: #bbb;font-size: 16px;text-decoration: none" href="">最新评论</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div style="margin-bottom: 20px">
-                        <button type="button" class="btn btn-sm btn-success" name="add-thumbs"><span class="glyphicon glyphicon-thumbs-up" > {% if not comment_types.2 %}0{% endif %}{{ comment_types.2 }}</span></button>
-                        <button type="button" class="btn btn-sm btn-success" name="get-comment"><span class="glyphicon glyphicon-comment" > {% if not comment_types.1 %}0{% endif %}{{ comment_types.1 }}</span></button>
+                        <!-- <button type="button" class="btn btn-sm btn-success" name="add-thumbs"><span class="glyphicon glyphicon-thumbs-up" > {% if not comment_types.2 %}0{% endif %}{{ comment_types.2 }}</span></button>
+                        <button type="button" class="btn btn-sm btn-success" name="get-comment"><span class="glyphicon glyphicon-comment" > {% if not comment_types.1 %}0{% endif %}{{ comment_types.1 }}</span></button> -->
                         <a><span><img src="/static/{{ article_obj.author.head_img|show_img }}" width="19" height="19"> {{ article_obj.author }}</span></a>
                         <span style="color: #bbb"> {{ article_obj.pub_date|diff_time }}</span>
                     </div>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="row hide" style="background-color: #fafafa" id="show-commnet">
                 </div>
-            {#            发表评论#}
+            <!-- {#            发表评论#}
                 <div style="margin-top: 20px">
                     {% if request.user.is_authenticated %}
                         <div id="comment_box">
@@ -49,7 +49,7 @@
                     {% endif %}
                 </div>
 
-            </div>
+            </div> -->
         </div>
         <div class="col-md-4"></div>
     </div>

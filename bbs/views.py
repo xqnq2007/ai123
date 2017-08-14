@@ -10,7 +10,9 @@ from django.core.exceptions import ObjectDoesNotExist
 import json
 from bbs import forms
 from bbs import comment_handler
-
+import sys  
+reload(sys)  
+sys.setdefaultencoding('utf8')   
 
 # Create your views here.
 category_list = models.Category.objects.filter(set_as_top_menu=True).order_by('position_index')
@@ -46,7 +48,7 @@ def index(request):
         context['category_obj'] = category_obj
     except ObjectDoesNotExist:
         pass
-    article_list = models.Article.objects.filter(status='published')
+    article_list = models.Article.objects.filter(status='published',category_id=4)
     context['category_list'] = category_list
 
     context['article_list'] = article_list

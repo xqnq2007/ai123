@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <title>智能123 AI123</title>
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="mku5N0Bskt" />
     <meta name ="keywords" content="智能123,ai123,AI,ai"/＞
-    <title></title>
+
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/zzsc.css' %}">
     <link rel="stylesheet" href="{% static 'src/jquery.skidder.css' %}">
     <script src="{% static 'js/jquery-1.11.1.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/imagesloaded.js' %}"></script>
     <script src="{% static 'js/smartresize.js' %}"></script>
     <script src="{% static 'src/jquery.skidder.js' %}"></script>
@@ -25,29 +27,37 @@
       <link rel="stylesheet" href="{% static 'css/main.css' %}">
 	<style type="text/css">
 
-             .navBar{
-             	display: none;
-             }
-             .main-menu dt{
-             	width: 13%;
-             }
-             .main-menu dd{
-               float: left;
-               width: 80%;
-               margin-bottom: 15px;
+     .navBar{
+     	display: none;
+     }
+     .main-menu dt{
+     	width: 13%;
+     }
+     .main-menu dd{
+       float: left;
+       width: 80%;
+       margin-bottom: 15px;
 
-             }
-             .main-menu a{
-               margin: 5px;
-             }
-             .main-menu {
-				min-height: 40px;
-				width: 100%;
-				border-bottom: 1px dashed #eee;
-				overflow: hidden;
-				padding-bottom: 10px;
-			}
-
+     }
+     .main-menu a{
+       margin: 5px;
+     }
+     .main-menu {
+			min-height: 40px;
+			width: 100%;
+			border-bottom: 1px dashed #eee;
+			overflow: hidden;
+			padding-bottom: 10px;
+		}
+    .skidder-viewport .skidder-clickwrapper {
+      width: 15%;
+      height: 300px;
+    }
+    .container .c-main .c-first-banner {
+        height: 300px;
+        margin-bottom: 10px; 
+        overflow: hidden;
+    }
 	</style>
   </head>
 <body>
@@ -154,51 +164,55 @@
         </div>
     </div>
 </header>
+            
+        
+
+        
 <div class="container">
     <div class="c-main fl">
         <section class="c-first-banner">
-            <a href="javascript:void(0)">
-            <div class="slideshow" style="height: 0; margin-top:15px;overflow: hidden">
-                <div class="slide"><img src="{% static 'img/moon.jpg' %}"></div>
-                <div class="slide"><img src="{% static 'img/chaoshi.jpg' %}"></div>
-                <div class="slide"><img src="{% static 'img/xingzou.jpg' %}"></div>
-                <div class="slide"><img src="{% static 'img/wuliu.jpg' %}"></div>
-				<div class="slide"><img src="{% static 'img/jiqiren.jpg' %}"></div>
+            <!-- <a href="javascript:void(0)"> -->
+            <div class="slideshow" style="overflow: hidden">
+            {% block container %}
+            {% endblock %}
+              
             </div>
             <script type="text/javascript">
-    $('.slideshow').each( function() {
-          var $slideshow = $(this);
-          $slideshow.imagesLoaded( function() {
-            $slideshow.skidder({
-              slideClass    : '.slide',
-              animationType : 'css',
-              scaleSlides   : true,
-              maxWidth : 1300,
-              maxHeight: 500,
-              paging        : true,
-              autoPaging    : true,
-              pagingWrapper : ".skidder-pager",
-              pagingElement : ".skidder-pager-dot",
-              swiping       : true,
-              leftaligned   : false,
-              cycle         : true,
-              jumpback      : false,
-              speed         : 400,
-              autoplay      : false,
-              autoplayResume: false,
-              interval      : 4000,
-              transition    : "slide",
-              afterSliding  : function() {},
-              afterInit     : function() {}
-            });
-          });
-    });
-    $(window).smartresize(function(){
-          $('.slideshow').skidder('resize');
-    });
+            // $(".picitem:first").addClass("active");
+              $('.slideshow').each( function() {
+                    var $slideshow = $(this);
+                    $slideshow.imagesLoaded( function() {
+                      $slideshow.skidder({
+                        slideClass    : '.slide',
+                        animationType : 'css',
+                        scaleSlides   : true,
+                        maxWidth : 500,
+                        maxHeight: 300,
+                        paging        : true,
+                        autoPaging    : true,
+                        pagingWrapper : ".skidder-pager",
+                        pagingElement : ".skidder-pager-dot",
+                        swiping       : true,
+                        leftaligned   : false,
+                        preservePortrait: false,
+                        cycle         : true,
+                        jumpback      : false,
+                        speed         : 1000,
+                        autoplay      : true,
+                        autoplayResume: true,
+                        interval      : 2000,
+                        transition    : "slide",
+                        afterSliding  : function() {},
+                        afterInit     : function() {}
+                      });
+                    });
+              });
+              $(window).smartresize(function(){
+                    $('.slideshow').skidder('resize');
+              });
 
-</script>
-</a>
+          </script>
+<!-- </a> -->
         </section>
 
         <section class="c-second-banner">
@@ -959,7 +973,7 @@
     <div class="c-main">
         <div class="c-left fl">
             <ul>
-                <li><a href=""><span>关于我们</span></a></li>
+                <!-- <li><a href=""><span>关于我们</span></a></li> -->
                 <!-- <li><a href=""><span>加入我们</span></a></li>
                 <li><a href=""><span>合作伙伴</span></a></li>
                 <li><a href=""><span>广告及服务</span></a></li>
