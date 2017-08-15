@@ -6,11 +6,11 @@
             <div class="">
                 <h1>{{ article_obj.title }}</h1>
                 <div style="margin: 15px;color: #bbb">
-                    <a><span><img src="/uploads/{{ article_obj.author.head_img|show_img }}" width="19" height="19"> {{ article_obj.author }}</span></a>
+                    <a><span><img src="/static/{{ article_obj.author.head_img|show_img }}" width="19" height="19"> {{ article_obj.author }}</span></a>
                     {{ article_obj.pub_date }}
                     {% resolve_comment article_obj as comment_types %}
                 </div>
-                <img src="/uploads/{{ article_obj.head_img|show_img }}" width="100%">
+                <img src="/static/{{ article_obj.head_img|show_img }}" width="100%">
                 <div style="line-height: 30px;font-size: 16px;margin: 20px 0">{{ article_obj.content|safe }}</div>
 
 {#                获取评论#}
@@ -23,7 +23,7 @@
                     <div style="margin-bottom: 20px">
                         <!-- <button type="button" class="btn btn-sm btn-success" name="add-thumbs"><span class="glyphicon glyphicon-thumbs-up" > {% if not comment_types.2 %}0{% endif %}{{ comment_types.2 }}</span></button>
                         <button type="button" class="btn btn-sm btn-success" name="get-comment"><span class="glyphicon glyphicon-comment" > {% if not comment_types.1 %}0{% endif %}{{ comment_types.1 }}</span></button> -->
-                        <a><span><img src="/uploads/{{ article_obj.author.head_img|show_img }}" width="19" height="19"> {{ article_obj.author }}</span></a>
+                        <a><span><img src="/static/{{ article_obj.author.head_img|show_img }}" width="19" height="19"> {{ article_obj.author }}</span></a>
                         <span style="color: #bbb"> {{ article_obj.pub_date|diff_time }}</span>
                     </div>
 
