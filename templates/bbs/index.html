@@ -8,7 +8,7 @@
 
         {% for article in article_list %}
             <div class = "slide">
-                       <img   src="/static/{{ article.head_img|show_img }}" >
+                       <img   src="/uploads/{{ article.head_img|show_img }}" >
                        <div class="carousel-caption" style="height: 40px;text-align: center;"> <div style="width:300px;height: 22px;margin:0px auto;"><a style="overflow: hidden;text-overflow:ellipsis;" href="{% url 'article_detail' article.id %}">{{ article.title }}</a></div></div>
                    
             </div>           
