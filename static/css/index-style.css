@@ -1,0 +1,28 @@
+/*
+Theme Name: runoob
+Theme URI: http://www.runoob.com/
+Version: 1.0
+Author: 鑿滈笩鏁欑▼
+Author URI: http://www.runoob.com/
+Description:鑿滈笩鏁欑▼ -- 瀛︾殑涓嶄粎鏄妧鏈紝鏇存柊姊︽兂
+Tags: 缁胯壊,涓夋爮
+*/
+
+.marg-bom-80{
+	margin-bottom: 50px;
+}
+.nav-justified{
+	width: 100%;
+    background: #3582F5;
+}
+.navbar .nav > li > a{
+	text-shadow:none;
+	color:white;
+}
+.box-small-link{
+	overflow: hidden;
+}
+.copyright{
+	height: 45px;
+    text-align: center;
+}

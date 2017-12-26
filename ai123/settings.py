@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aiindex',
-    'bbs'
+    'bbs',
+    'aitutorial',
+    'markdown_deux',
+    'pagedown',
+    'markdownx',
+    'simditor',
+    'django_mathjax'
 ]
 
 MIDDLEWARE = [
@@ -134,13 +140,35 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
 STATIC_URL = '/static/'
-#STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
 
     #'D:/pyprojects/ai123/static/',
-    os.path.join(BASE_DIR, 'static'),
+    #os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'uploads'),
 
 )
-#ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+MEDIA_URL = "/uploads/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+SIMDITOR_UPLOAD_PATH = ''
+SIMDITOR_IMAGE_BACKEND = 'pillow'
+
+SIMDITOR_TOOLBAR = [
+    'title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale',
+    'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link',
+    'image', 'hr', '|', 'indent', 'outdent', 'alignment', 'fullscreen',
+    'markdown'
+]
+
+SIMDITOR_CONFIGS = {
+    'toolbar': SIMDITOR_TOOLBAR,
+    'upload': {
+        'url': '/simditor/upload/',
+        'fileKey': 'upload'
+    }
+}
+MATHJAX_ENABLED=True
+MATHJAX_LOCAL_PATH = '/static/js/libs/mathjax/'

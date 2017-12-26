@@ -1,0 +1,54 @@
+{% extends 'indexbase.html' %}
+	{% block sidebar %}
+	
+    <ul class="nav nav-tabs nav-stacked main-menu">
+    	<li class="nav-header hidden-tablet">教程分类</li>
+    	{% for caterow in cate %}
+    		{% for cate_enname,subdic in caterow.items %}
+    			<li ><a href="/{{cate_enname}}"></i><span class="hidden-tablet">{{subdic.cnname}}</span></a></li>
+    		{% endfor %}
+		{% endfor %}
+      
+    </ul>
+  	{% endblock %}
+
+
+  <!-- start: Content -->
+  	{% block content %}
+
+	{% for caterow in cate %}
+		{% for cate_enname,subdic in caterow.items %}
+			<div>
+			    <ul class="breadcrumb">
+			      <li> {{subdic.cnname}} </li>
+			    </ul>
+			</div>
+			
+			<div class="sortable row-fluid">
+			  	{% for subrow in subdic.content|slice:":5" %}
+		  			
+						<div class="box-small span2"> <a data-rel="tooltip" class="box-small-link" href="tur_article/?subcate={{subrow.ai_subcate_id}}&page=1" >
+						<div> {{subrow.name}}</div>
+						</a>
+						<a data-rel="tooltip" href="tur_article/?subcate={{subrow.ai_subcate_id}}&page=1" ><div class="box-small-title">{{subrow.name}}</div></a>
+						<!-- <span class="notification blue"><img src="http://www.sitemaster.com.cn/favicon.ico" style="height:16px" alt="SiteMaster"></span> --> </div>
+					
+			  	{% endfor %}
+		  	</div>
+		  	{% if "{{subdic.content|length}}" > 5 %}
+		  		<div class="sortable row-fluid">
+				  	{% for subrow in subdic.content|slice:"5:" %}
+			  			
+							<div class="box-small span2"> <a data-rel="tooltip"  class="box-small-link" href="tur_article/?subcate={{subrow.ai_subcate_id}}&page=1" >
+							<div> {{subrow.name}}</div>
+							</a>
+							<a data-rel="tooltip" href="tur_article/?subcate={{subrow.ai_subcate_id}}&page=1" ><div class="box-small-title">{{subrow.name}}</div></a>
+							<!-- <span class="notification blue"><img src="http://www.sitemaster.com.cn/favicon.ico" style="height:16px" alt="SiteMaster"></span> --> </div>
+						
+				  	{% endfor %}
+			  	</div>
+		  	{% endif %}
+		{% endfor %}
+	{% endfor %}
+    {% endblock %}
+      

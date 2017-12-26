@@ -1,0 +1,31 @@
+{% extends 'indexbase.html' %}
+{% load markdown_deux_tags %}
+ 
+
+	{% block sidebar %}
+
+    <ul class="nav nav-tabs nav-stacked main-menu">
+    	<li class="nav-header hidden-tablet">{{subcatename}}</li>
+    	{% for title in title_contents %}
+    		
+    			<li ><a href="/tur_article/?subcate={{title.ai_subcate_id}}&page={{title.page}}"><i class="icon-home"></i><span class="hidden-tablet">{{title.title}}</span></a></li>
+    		
+		  {% endfor %}
+      
+    </ul>
+	{% endblock %}
+
+
+  <!-- start: Content -->
+  	{% block content %}
+    {% if "{{prepage}}"%}
+      <a href="/tur_article/?subcate={{prepage.ai_subcate_id}}&page={{prepage.page}}">{{prepage.title}}</a>
+    {% endif %}
+    {% if "{{nextpage}}"%}
+       <a href="/tur_article/?subcate={{nextpage.ai_subcate_id}}&page={{nextpage.page}}">{{nextpage.title}}</a>
+    {% endif %}
+     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		{{cur_article.content|safe}}
+	
+    {% endblock %}
+      
