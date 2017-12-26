@@ -2,8 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from markdownx.models import MarkdownxField
-from tinymce.models import HTMLField
 from simditor.fields import RichTextField
 import django.utils.timezone as timezone
 
@@ -13,9 +11,7 @@ class AiArticle(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=255)
     brief = models.CharField(max_length=50)
-    #content = MarkdownxField()#models.TextField()
     #content = models.TextField()
-    #content = HTMLField()
     content = RichTextField()
     page = models.IntegerField(default=1)
     pub_date = models.DateTimeField(blank=True, null=True,default=timezone.now)
