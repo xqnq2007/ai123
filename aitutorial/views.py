@@ -8,7 +8,6 @@ try:
 	from django.utils import simplejson as json
 except:
 	import simplejson as json
-from markdown import markdown
 # Create your views here.
 #category_list = models.Category.objects.filter(set_as_top_menu=True).order_by('position_index')
 def index(request):

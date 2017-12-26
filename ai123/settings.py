@@ -40,9 +40,6 @@ INSTALLED_APPS = [
     'aiindex',
     'bbs',
     'aitutorial',
-    'markdown_deux',
-    'pagedown',
-    'markdownx',
     'simditor',
     'django_mathjax'
 ]
